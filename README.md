@@ -25,7 +25,7 @@ Praticar automação de testes front-end com Cypress em um ambiente real de e-co
 
 ## 🔐 Ambiente de Testes
 
-- **Site**: [https://www.saucedemo.com/](https://www.saucedemo.com/)
+- **Site**: [https://www.saucedemo.com](https://www.saucedemo.com/)
 - **Usuário de teste**:
   - `standard_user`
   - Senha: `secret_sauce`
