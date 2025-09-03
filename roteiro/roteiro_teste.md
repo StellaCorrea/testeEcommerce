@@ -3,6 +3,10 @@
 Este documento define os cenários de teste validados com Cypress para o site [https://www.saucedemo.com](https://www.saucedemo.com).
 
 ---
+## EXECUÇÃO TESTE INDIVIDUAIS 
+
+- npx cypress run --spec "cypress/e2e/login/login_sem_inserir_campo_senha.cy.js" 
+
 
 ## 🔐 1. Login
 
@@ -10,18 +14,34 @@ Este documento define os cenários de teste validados com Cypress para o site [h
 - **Usuário**: `standard_user`
 - **Senha**: `secret_sauce`
 - Esperado: redirecionar para `/inventory.html` com a lista de produtos visível.
+- Caso 1 ✅
 
 ### ❌ Caso 2: Login com usuário inválido
 - **Usuário**: `usuario_incorreto`
 - **Senha**: `senhaqualquer`
 - Esperado: exibir mensagem de erro de login.
 
+- Caso 2 ✅
+
 ### ❌ Caso 3: Login com senha incorreta
 - **Usuário**: `standard_user`
 - **Senha**: `senhaerrada`
 - Esperado: exibir mensagem de erro de senha.
 
+- Caso 1 ✅
+
+### ❌ Caso 4: Login sem inserir  senha no campo senha
+- **Usuário**: `standard_user`
+- **Senha**: ``
+- Esperado: exibir mensagem informando que o usuário deve preencher o campo senha
+
+
+### ❌ Caso 5: Login sem inserir nome de usuário no campo username
+- **Usuário**: ``
+- **Senha**: `secret_sauce`
+- Esperado: exibir mensagem informando que o usuário deve preencher o campo username
 ---
+
 
 ## 🛒 2. Carrinho de Compras
 
