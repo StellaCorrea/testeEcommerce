@@ -1,4 +1,3 @@
-
 // ### ❌ Caso 4: Login sem inserir  senha no campo senha
 // - **Usuário**: `standard_user`
 // - **Senha**: ``

@@ -1,4 +1,4 @@
-// ### ✅ Caso 6: Adicionar produto ao carrinho
+// ###  Caso 6: Adicionar produto ao carrinho
 // - Ação: clicar em "Add to cart" no primeiro produto.
 // - Esperado: contador do carrinho deve exibir `1`.
 describe("Fluxo add um produto ao carrinho de Compras", () => {
@@ -19,6 +19,6 @@ describe("Fluxo add um produto ao carrinho de Compras", () => {
       .and("have.text", "1");
       cy.wait(2000); // espera 2 segundos (2000 milissegundos)
 
-    cy.log("✅ Produto adicionado ao carrinho com sucesso");
+    cy.log("Produto adicionado ao carrinho com sucesso");
   });
 });
