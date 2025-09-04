@@ -56,19 +56,25 @@ Este documento define os cenários de teste validados com Cypress para o site [h
 - Ação: clicar em "Remove" no produto que está no carrinho.
 - Esperado: contador do carrinho some ou zere.
 
+- Caso 7 ✅
+
+### ✅ Caso 8: Adicionar  3 produtos ao carrinho
+- Ação: clicar em "Add to cart" em três produtos.
+- Esperado: contador do carrinho deve exibir `3`.
+
 ---
 
 ## 🛍️ 3. Finalização da Compra
 
-### ✅ Caso 8: Acesso ao Checkout
+### ✅ Caso 9: Acesso ao Checkout
 - Ação: clicar no ícone do carrinho e depois em "Checkout".
 - Esperado: abrir página `/checkout-step-one.html`.
 
-### ✅ Caso 9: Preenchimento dos dados e continuar
+### ✅ Caso 10: Preenchimento dos dados e continuar
 - Preencher: First Name, Last Name, Zip/Postal Code.
 - Esperado: avançar para página `/checkout-step-two.html`.
 
-### ✅ Caso 10: Finalizar compra
+### ✅ Caso 11: Finalizar compra
 - Ação: clicar em "Finish"
 - Esperado: exibir mensagem `Thank you for your order!`.
 
@@ -76,6 +82,6 @@ Este documento define os cenários de teste validados com Cypress para o site [h
 
 ## 🔓 4. Logout
 
-### ✅ Caso 11: Logout após login
+### ✅ Caso 12: Logout após login
 - Ação: Abrir o menu lateral e clicar em "Logout"
 - Esperado: voltar para a tela de login (`/`).
