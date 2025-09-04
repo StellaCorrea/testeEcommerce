@@ -1,7 +1,7 @@
 // ### ✅ Caso 6: Adicionar produto ao carrinho
 // - Ação: clicar em "Add to cart" no primeiro produto.
 // - Esperado: contador do carrinho deve exibir `1`.
-describe("Fluxo add um produto ao arrinho de Compras", () => {
+describe("Fluxo add um produto ao carrinho de Compras", () => {
   beforeEach(() => {
     cy.loginSauceDemo();
   });
