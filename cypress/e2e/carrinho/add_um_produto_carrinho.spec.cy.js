@@ -6,7 +6,7 @@ describe("Fluxo add um produto ao carrinho de Compras", () => {
     cy.loginSauceDemo();
   });
 
-  it("✅ Caso 4: Adicionar produto ao carrinho", () => {
+  it("✅ Caso 6: Adicionar produto ao carrinho", () => {
     // Clica no botão "Add to cart" da mochila
     cy.get('[data-test="add-to-cart-sauce-labs-backpack"]')
       .should("be.visible")

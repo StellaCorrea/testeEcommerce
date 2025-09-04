@@ -50,6 +50,8 @@ Este documento define os cenários de teste validados com Cypress para o site [h
 - Ação: clicar em "Add to cart" no primeiro produto.
 - Esperado: contador do carrinho deve exibir `1`.
 
+- Caso 6 ✅
+
 ### ✅ Caso 7: Remover produto do carrinho
 - Ação: clicar em "Remove" no produto que está no carrinho.
 - Esperado: contador do carrinho some ou zere.
