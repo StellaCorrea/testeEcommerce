@@ -28,28 +28,29 @@ Este documento define os cenários de teste validados com Cypress para o site [h
 - **Senha**: `senhaerrada`
 - Esperado: exibir mensagem de erro de senha.
 
-- Caso 1 ✅
+- Caso 3 ✅
 
 ### ❌ Caso 4: Login sem inserir  senha no campo senha
 - **Usuário**: `standard_user`
 - **Senha**: ``
 - Esperado: exibir mensagem informando que o usuário deve preencher o campo senha
 
+- Caso 4 ✅
 
 ### ❌ Caso 5: Login sem inserir nome de usuário no campo username
 - **Usuário**: ``
 - **Senha**: `secret_sauce`
 - Esperado: exibir mensagem informando que o usuário deve preencher o campo username
 ---
-
+- Caso 5 ✅
 
 ## 🛒 2. Carrinho de Compras
 
-### ✅ Caso 4: Adicionar produto ao carrinho
+### ✅ Caso 6: Adicionar produto ao carrinho
 - Ação: clicar em "Add to cart" no primeiro produto.
 - Esperado: contador do carrinho deve exibir `1`.
 
-### ✅ Caso 5: Remover produto do carrinho
+### ✅ Caso 7: Remover produto do carrinho
 - Ação: clicar em "Remove" no produto que está no carrinho.
 - Esperado: contador do carrinho some ou zere.
 
@@ -57,15 +58,15 @@ Este documento define os cenários de teste validados com Cypress para o site [h
 
 ## 🛍️ 3. Finalização da Compra
 
-### ✅ Caso 6: Acesso ao Checkout
+### ✅ Caso 8: Acesso ao Checkout
 - Ação: clicar no ícone do carrinho e depois em "Checkout".
 - Esperado: abrir página `/checkout-step-one.html`.
 
-### ✅ Caso 7: Preenchimento dos dados e continuar
+### ✅ Caso 9: Preenchimento dos dados e continuar
 - Preencher: First Name, Last Name, Zip/Postal Code.
 - Esperado: avançar para página `/checkout-step-two.html`.
 
-### ✅ Caso 8: Finalizar compra
+### ✅ Caso 10: Finalizar compra
 - Ação: clicar em "Finish"
 - Esperado: exibir mensagem `Thank you for your order!`.
 
@@ -73,6 +74,6 @@ Este documento define os cenários de teste validados com Cypress para o site [h
 
 ## 🔓 4. Logout
 
-### ✅ Caso 9: Logout após login
+### ✅ Caso 11: Logout após login
 - Ação: Abrir o menu lateral e clicar em "Logout"
 - Esperado: voltar para a tela de login (`/`).

@@ -1,3 +1,8 @@
+// ### ❌ Caso 2: Login com usuário inválido
+// - **Usuário**: `usuario_incorreto`
+// - **Senha**: `senhaqualquer`
+// - Esperado: exibir mensagem de erro de login.
+
 describe("Fluxo de Login - Usuário com acesso inválido por meio de um nome de usuário e senha incorretas ao e-commerce", () => {
   it("Não deve autenticar o usuário e nem redirecionar para a página de produtos", () => {
     cy.visit("https://www.saucedemo.com");

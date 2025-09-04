@@ -1,4 +1,7 @@
-
+// ### ✅ Caso 1: Login com credenciais válidas
+// - **Usuário**: `standard_user`
+// - **Senha**: `secret_sauce`
+// - Esperado: redirecionar para `/inventory.html` com a lista de produtos visível.
   describe('Fluxo de Login - Usuário com acesso válido ao e-commerce', () => {
     it('Deve autenticar e redirecionar para a página de produtos', () => {
       cy.visit('https://www.saucedemo.com', {
