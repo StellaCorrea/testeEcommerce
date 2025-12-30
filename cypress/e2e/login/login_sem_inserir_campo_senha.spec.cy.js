@@ -2,19 +2,25 @@
 // - **Usuário**: `standard_user`
 // - **Senha**: ``
 // - Esperado: exibir mensagem informando que o usuário deve preencher o campo senha
-
-describe("Fluxo de Login - Usuário com acesso inválido por meio de um campo ausente (campo senha)", () => {
+describe(
+  "Fluxo de Login - Usuário com acesso inválido por meio de um campo ausente (campo senha)",
+  () => {
     it("Não deve autenticar o usuário e nem redirecionar para a página de produtos", () => {
-      cy.visit("https://www.saucedemo.com");
-      cy.wait(2000); // espera 2 segundos (2000 milissegundos)
-      cy.get('[data-test="username"]').type("standard_user");
+      cy.visit("https://www.saucedemo.com")
+
+      cy.get('[data-test="username"]')
+        .should('be.visible')
+        .type("standard_user")
+
       // não interagir com campo senha
-      cy.wait(2000); // espera 2 segundos (2000 milissegundos)
-      cy.get('[data-test="login-button"]').click();
-      
-      cy.wait(2000); // espera 2 segundos (2000 milissegundos)
-      cy.get('[data-test="error"]', { timeout: 2000 }).should('be.visible')
+      cy.get('[data-test="login-button"]').click()
+
+      cy.get('[data-test="error"]')
+        .should('be.visible')
         .and('contain', 'Epic sadface: Password is required')
+    })
+  }
+)
 
 
      //AQUI EU TROUXE O ELEMENTO COMPLETO CASO DUVIDAS
@@ -26,5 +32,4 @@ describe("Fluxo de Login - Usuário com acesso inválido por meio de um campo au
     //     12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
     //     </button>Epic sadface: Password is required</h3></div>
 
-        });
-  });
+  

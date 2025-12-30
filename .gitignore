@@ -14,3 +14,12 @@
 #node modules
 node_modules
 
+#cypress reports
+cypress/reports/
+
+cypress/videos/
+cypress/screenshots/
+cypress/reports/json/
+
+
+

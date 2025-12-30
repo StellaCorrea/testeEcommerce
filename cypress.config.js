@@ -1,19 +1,24 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    reportDir: 'cypress/reports',
+    charts: true,
+    reportPageTitle: 'Relatório Cypress',
+    embeddedScreenshots: false,
+    inlineAssets: false,
+  },
+
   e2e: {
     baseUrl: 'https://www.saucedemo.com',
-    specPattern: 'cypress/e2e/**/*.cy.js',
 
     setupNodeEvents(on, config) {
-      // eventos do node (pode ficar vazio)
+      require('cypress-mochawesome-reporter/plugin')(on)
       return config
     },
 
-    video: true,
-    trashAssetsBeforeRuns: false,
-    videosFolder: 'cypress/videos',
     screenshotsFolder: 'cypress/screenshots',
+    videosFolder: 'cypress/videos',
   },
 })
-

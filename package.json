@@ -3,17 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test: debug": "set DEBUG=cypress:* && npx cypress run" 
-   
+   "cy:run": "cypress run",
+  "clean:reports": "rimraf cypress/reports",
+  "test:report": "npm run clean:reports && npm run cy:run"
+  
   },
   "author": "",
   "license": "ISC",
   "keywords": [],
   "description": "",
   "devDependencies": {
-    "cypress": "^13.6.4"
+    "cypress": "^13.6.4",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.0",
+    "mochawesome-report-generator": "^6.3.2",
+    "rimraf": "^6.1.2"
   }
-  
-
 }
