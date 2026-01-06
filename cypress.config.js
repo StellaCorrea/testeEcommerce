@@ -8,6 +8,9 @@ module.exports = defineConfig({
     reportPageTitle: 'Relatório Cypress',
     embeddedScreenshots: false,
     inlineAssets: false,
+    html: false,
+    json: true,
+    overwrite: false
   },
 
   e2e: {

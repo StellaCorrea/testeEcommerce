@@ -17,5 +17,7 @@ describe("Fluxo de Login - Usuário com acesso inválido por meio de um nome de 
       .should("be.visible")
       .and("contain", "Username and password do not match");
     cy.log("Mensagem de erro validada com sucesso");
+
+    cy.screenshot("login_invalido");
   });
 });

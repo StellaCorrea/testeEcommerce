@@ -21,7 +21,17 @@ Praticar automação de testes front-end com Cypress em um ambiente real de e-co
 - [Cypress v13.6.4](https://docs.cypress.io/)
 - Git Bash
 
----
+## 📊 Relatórios de Testes
+
+Este projeto utiliza o **Mochawesome** como gerador de relatórios para os testes automatizados com Cypress.
+
+Os testes são configurados para gerar relatórios no formato **JSON**, que posteriormente podem ser consolidados em um **relatório HTML interativo**, facilitando a análise dos resultados.
+
+### 🔧 Ferramentas de Relatório
+- [Mochawesome](https://github.com/adamgruber/mochawesome)
+- [mochawesome-merge](https://github.com/antontelesh/mochawesome-merge)
+- [mochawesome-report-generator (marge)](https://github.com/adamgruber/mochawesome-report-generator)
+
 
 ## 🔐 Ambiente de Testes
 

@@ -22,6 +22,8 @@
       cy.get('.app_logo', { timeout: 20000 }).should('be.visible')
         .then(() => {
           cy.log('✅ Elemento exibido com sucesso');
+
+          cy.screenshot("login_valido");
         })
     })
   })
