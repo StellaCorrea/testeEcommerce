@@ -2,45 +2,45 @@
 // - Ação: clicar em "Remove" no produto que está no carrinho.
 // - Esperado: contador do carrinho some ou zere.
 
-describe("Fluxo: Remover três produtos do carrinho de compras", () => {
+describe("Flow: Remove three products from the shopping cart", () => {
   beforeEach(() => {
     cy.loginSauceDemo();
     cy.viewport(1280, 720);
   });
 
-  it("✅ Caso 9: Adiciona e remove três produtos do carrinho", () => {
-    const produtos = [
+  it("✅ Case 9: Add and remove three products from the cart", () => {
+    const products = [
       "sauce-labs-backpack",
       "sauce-labs-bolt-t-shirt",
       "sauce-labs-bike-light",
     ];
 
-    // 1. Adiciona os 3 produtos
-    produtos.forEach((produto) => {
-      cy.get(`[data-test="add-to-cart-${produto}"]`)
+    // 1. Add three products
+    produtos.forEach((products) => {
+      cy.get(`[data-test="add-to-cart-${products}"]`)
         .should("be.visible")
         .click();
-      cy.wait(5000); // visualização
     });
 
-    // 2. Verifica o contador do carrinho com valor 3
+    // 2. Validate cart badge shows 3 items
     cy.get('[data-test="shopping-cart-badge"]')
       .should("be.visible")
       .and("have.text", "3");
 
-    cy.wait(5000); // visualização
+    // Visual Evidence: cart with products
+    cy.screenshot("cart-with-3-products");
 
-    // 3. Remove os 3 produtos
-    produtos.forEach((produto) => {
-      cy.get(`[data-test="remove-${produto}"]`).should("be.visible").click();
+    // 3. Remove all the three products
+    produtos.forEach((products) => {
+      cy.get(`[data-test="remove-${products}"]`).should("be.visible").click();
     });
 
-    // 4. Verifica que o carrinho está vazio
+    // 4. Validate if the carts is empty
     cy.get('[data-test="shopping-cart-badge"]').should("not.exist");
 
-    cy.wait(5000); // visualização
-    cy.log("✅ Três produtos removidos com sucesso e carrinho vazio");
+    cy.log("✅ Three products were successfully removed and the cart is empty");
 
-    cy.screenshot("remove_tres_produtos_carrinho");
+    // Visual evidence: empty cart screenshot
+    cy.screenshot("cart-empty");
   });
 });

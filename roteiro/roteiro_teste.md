@@ -68,7 +68,7 @@ Este documento define os cenários de teste validados com Cypress para o site [h
 - Ação: clicar em "Remove" no produto que está no carrinho.
 - Esperado: contador do carrinho some ou zere.
 
-
+- Caso 9 ✅
 ---
 
 ## 🛍️ 3. Finalização da Compra

@@ -2,40 +2,38 @@
 // - Ação: clicar em "Add to cart" em três produtos.
 // - Esperado: contador do carrinho deve exibir `3`.
 
-describe("Fluxo add três produtos ao carrinho de Compras", () => {
+describe("Flow: Add three products to the shopping cart", () => {
   beforeEach(() => {
     cy.loginSauceDemo();
   });
 
-  it("✅ Caso 8: Adicionar produto ao carrinho", () => {
+  it("✅ Case 8: Add product to the cart", () => {
     // Clica no botão "Add to cart" da mochila
     cy.get('[data-test="add-to-cart-sauce-labs-backpack"]')
       .should("be.visible")
       .click();
-      cy.wait(2000); // espera 2 segundos (2000 milissegundos)
+    cy.wait(2000); // espera 2 segundos (2000 milissegundos)
 
-      // Adiciona a Bolt T-Shirt
+    // Add a Bolt T-Shirt
     cy.get('[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]')
-      .should('be.visible')
+      .should("be.visible")
       .click();
 
     cy.wait(1000); // Espera um segundo só pra dar tempo de animação
 
-    // Adiciona o Onesie
+    // Add Onesie to the cart
     cy.get('[data-test="add-to-cart-sauce-labs-onesie"]')
-      .should('be.visible')
+      .should("be.visible")
       .click();
 
-
-    // Aguarda até que o contador do carrinho apareça com "3"
+    // Validate cart badge displays '3'
     cy.get('[data-test="shopping-cart-badge"]', { timeout: 5000 })
       .should("be.visible")
       .and("have.text", "3");
-      cy.wait(2000); // espera 2 segundos (2000 milissegundos)
+    cy.wait(2000); // espera 2 segundos (2000 milissegundos)
 
-    cy.log("Produtos adicionados ao carrinho com sucesso");
+    cy.log("Three products were successfully added to the cart");
 
-    cy.screenshot('add_tres_produtos_carrinho'); 
-
+    cy.screenshot("add-flow-cart-with-3-products");
   });
 });
