@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
    "cy:run": "cypress run",
-  "clean:reports": "rimraf cypress/reports",
-  "test:report": "npm run clean:reports && npm run cy:run",
+  "clean:reports": "rimraf cypress/reports cypress/screenshots cypress/videos",
+  "test:clean": "npm run clean:reports && npx cypress run",
+  "test:report": "npm run clean:reports && npx cypress run && npm run merge:reports && npm run generate:html",
   "marge:reports":"mochawesome-merge cypress/reports/json/*.json > cypress/reports/report.json",
    "generate:html": "marge cypress/reports/report.json --reportDir cypress/reports/html"
   

@@ -20,5 +20,6 @@ describe("Fluxo add um produto ao carrinho de Compras", () => {
       cy.wait(2000); // espera 2 segundos (2000 milissegundos)
 
     cy.log("Produto adicionado ao carrinho com sucesso");
+    cy.screenshot('add_um_produto_carrinho');
   });
 });

@@ -55,3 +55,12 @@ support/ → Arquivos auxiliares, comandos customizados etc.
 ## ▶️ Rodar teste via terminal (modo headless)
 
 npx cypress run --spec "cypress/e2e/api/listar_poules_canceladas.cy.js"
+
+
+## Para rodar testes limpos:
+
+npm run test:clean
+
+## Rodar tudo limpo + relatório:
+
+npm run test:report
