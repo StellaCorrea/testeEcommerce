@@ -16,8 +16,8 @@ describe("Flow: Remove three products from the shopping cart", () => {
     ];
 
     // 1. Add three products
-    produtos.forEach((products) => {
-      cy.get(`[data-test="add-to-cart-${products}"]`)
+    products.forEach((product) => {
+      cy.get(`[data-test="add-to-cart-${product}"]`)
         .should("be.visible")
         .click();
     });
@@ -31,8 +31,8 @@ describe("Flow: Remove three products from the shopping cart", () => {
     cy.screenshot("cart-with-3-products");
 
     // 3. Remove all the three products
-    produtos.forEach((products) => {
-      cy.get(`[data-test="remove-${products}"]`).should("be.visible").click();
+    products.forEach((product) => {
+      cy.get(`[data-test="remove-${product}"]`).should("be.visible").click();
     });
 
     // 4. Validate if the carts is empty

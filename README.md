@@ -19,7 +19,7 @@ Praticar automação de testes front-end com Cypress em um ambiente real de e-co
 
 - [Node.js](https://nodejs.org/)
 - [Cypress v13.6.4](https://docs.cypress.io/)
-  [Mochawesome](https://github.com/adamgruber/mochawesome)
+- [Mochawesome](https://github.com/adamgruber/mochawesome)
 - Git Bash
 
 ## 📊 Relatórios de Testes

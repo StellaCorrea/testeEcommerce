@@ -3,8 +3,8 @@
 // - **Senha**: `senhaqualquer`
 // - Esperado: exibir mensagem de erro de login.
 
-describe("Fluxo de Login - Usuário com acesso inválido por meio de um nome de usuário e senha incorretas ao e-commerce", () => {
-  it("Não deve autenticar o usuário e nem redirecionar para a página de produtos", () => {
+describe("Login Flow - User with invalid access using incorrect username and password on the e-commerce", () => {
+  it("Should not authenticate the user or redirect to the products page", () => {
     cy.visit("https://www.saucedemo.com");
     cy.wait(2000); // espera 2 segundos (2000 milissegundos)
     cy.get('[data-test="username"]').type("usuario_incorreto");
